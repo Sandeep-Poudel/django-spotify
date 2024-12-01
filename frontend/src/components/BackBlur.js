@@ -8,8 +8,8 @@ function BackBlur({ image }) {
     return (
         <Box
             bgImage={image}
-            bgSize="cover"
-            bgPosition="center"
+            bgSize="cover" // Ensures the background image covers the container
+            bgPosition="center" // Centers the image
             w="100%"
             h="100%"
             position="absolute"
@@ -17,6 +17,7 @@ function BackBlur({ image }) {
             left="0"
             zIndex="-1"
             filter="blur(8px)"
+            overflow="hidden" // Ensures that the image is clipped at the edges
         />
     );
 }
